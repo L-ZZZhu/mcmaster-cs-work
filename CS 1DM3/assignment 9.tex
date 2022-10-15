@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{mathtools,amssymb}
+\title{assignemnt 5}
+\author{Longyu Zhu}
+\begin{document}
+\section*{7.4}
+\subsection*{Exercise 4}
+A coin is biased so that the probability a head comes up when it is flipped is 0.6. What is the expected number of heads that come up when it is flipped 10 times?\\
+10*0.6=6\\
+the answer is 6 times\\
+\\
+\subsection*{Exercise 8}
+What is the expected sum of the numbers that appear when three fair dice are rolled?\\
+$3*\frac{1+2+3+4+5+6}{6}=10.5$\\
+so we can get 10.5\\
+\\
+\subsection*{Exercise 10}
+Suppose that we flip a fair coin until either it comes up tails twice or we have flipped it six times. What is the expected number of times we flip the coin?\\
+if times is 2 $(0.5)^2=0.25$\\
+if times is 3 $2*(0.5)^3=0.25$\\
+if times is 4 $3*(0.5)^4=0.1875$\\
+if times is 5 $4*(0.5)^5=0.125$\\
+if times is 6 $6*(0.5)^5=0.1875$\\
+$2*0.25+3*0.25+4*0.1875+5*0.125+6*0.1875=3.75$\\
+\\
+\subsection*{Exercise 36}
+\begin{equation}\nonumber
+    \begin{split}
+&p=\frac{3}{5}\\
+&q=1-\frac{3}{5}=\frac{2}{5}\\
+&E(X)=np\\
+&=\frac{3n}{5}\\
+&V(X)=npq\\
+&=\frac{3n}{5}*\frac{2}{5}\\
+&=\frac{6n}{25}\\
+&p(|X(s)-\frac{3n}{5}|\geq \sqrt{n})\leq \frac{6n}{25}/(\sqrt{n})^2\\
+&=\frac{6n}{25}*\frac{1}{n}\\
+&=\frac{6}{25}
+    \end{split}
+\end{equation}
+\\
+\section*{9.1}
+\subsection*{Exercise 4}
+a) a is taller than b\\
+Reflexive: No\\
+Symmetric: No\\
+Antisymmetric:Yes\\
+Transitive:Yes\\
+\\
+b) a and b were born on the same day\\
+Reflexive: Yes\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:Yes\\
+\\
+c) a has the same first name as b\\
+Reflexive: Yes\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:Yes\\
+\\
+d) a and b have a common grandparent\\
+Reflexive: Yes\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:No\\
+\\
+
+\subsection*{Exercise 6}
+a) x+y=0\\
+Reflexive: No\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:No\\
+\\
+b) x=$\pm y$\\
+Reflexive: Yes\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:Yes\\
+\\
+c) x-y is a rational number.\\
+Reflexive: Yes\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:Yes\\
+\\
+d) x=2y\\
+Reflexive: No\\
+Symmetric: No\\
+Antisymmetric:Yes\\
+Transitive:No\\
+\\
+e) xy$\geq 0$\\
+Reflexive: Yes\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:No\\
+\\
+f)xy=0\\
+Reflexive: No\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:No\\
+\\
+g) x=1\\
+Reflexive: No\\
+Symmetric: No\\
+Antisymmetric:Yes\\
+Transitive:Yes\\
+\\
+h) x=1 or y=1\\
+Reflexive: No\\
+Symmetric: Yes\\
+Antisymmetric:No\\
+Transitive:No\\
+\\
+
+\subsection*{Exercise 32}
+R=${(1,2),(1,3),(2,3),(2,4),(3,1)}$\\
+S=${(2,1),(3,1),(3,2),(4,2)}$\\
+$S\circ R={(1,1),(1,2),2,1),(2,2)}$\\
+\\
+\subsection*{Exercise 56}
+Show that the relation R on a set A is reflexive if and only if the complementary relation $\overline{R}$ is irreflexive.\\
+\begin{equation}\nonumber
+    a\in A\\
+    (a,a)\in R\\
+    (a,a)\notin \overline{R}\\
+    \\
+    \\
+    a\in A\\
+    (a,a)\notin \overline{R}\\
+    (a,a)\in R\\
+\end{equation}
+so R is reflexive if and only if $\overline{R}$ is irreflexive\\
+\\
+\section*{9.4}
+\subsection*{Exercise 2}
+\begin{equation}\nonumber
+    R={(a,b)/a\neq b}\\
+    ={(a,b)/a\neq b}\cup {(a,a)/a\in Z}\\
+    ={(a,b)/a,b\in Z}\\
+    =Z*Z\\
+\end{equation}
+reflexive closure of R is the set.\\
+\\
+\subsection*{Exercise 20}
+a)$R^2$\\
+\begin{equation}\nonumber
+    R^2=R\circ R\\
+    ={(a,b)}\\
+    ={(a,b)}\\
+\end{equation}
+the airline will be haev one stop in some intermediate ciyt\\
+\\
+b)$R^3$\\
+\begin{equation}\nonumber
+    R^3=R\circ R\\
+    ={(a,b)}\\
+    ={(a,b)}\\
+\end{equation}
+the airline will be haev two stop in some intermediate ciyt\\
+c)$R^*$\\
+\begin{equation}\nonumber
+    R^*=R\cup R^2 \cup R^3 \cup ...... \cup R^n\\
+    will~have~n-1~stop\\
+\end{equation}
+it is possible to fly from a to b\\
+\\
+\section*{9.5}
+\subsection*{Exercise 2}
+Which of these relations on the set of all people are equivalence relations? Determine the properties of an equivalence relation that the others lack.\\
+a) {(a, b) | a and b are the same age}\\
+equivalence relation\\
+\\
+b) {(a, b) | a and b have the same parents}\\
+equivalence relation\\
+\\
+c) {(a, b) | a and b share a common parent} \\
+not Transitive\\
+\\
+d) {(a, b) | a and b have met} \\
+not Transitive\\
+\\
+e) {(a, b) | a and b speak a common language}\\
+not Transitive\\
+\\
+\subsection*{Exercise 10}
+\begin{center}
+\begin{equation}\nonumber
+    \begin{aligned}
+    (x,y)\in R \rightarrow x,y \in [X]R \rightarrow f(x)=x_0=f(y)\\
+    f(x)=f(y)\rightarrow x_0=y_0\rightarrow[X]R=[y]R\rightarrow\in [x]R\rightarrow(x,y)\in R\\
+    (x,y)\in R~~~~~x,y\in A\\
+    (x,y)\in R~~~~~f(X)=f(y)=c_1\\
+    (x,y)\in R~~~~~f(x)=f(y)\\
+    \end{aligned}
+\end{equation}
+\end{center}
+the function f defined above satisifes the required condition.\\
+\\
+
+\end{document}

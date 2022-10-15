@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{amssymb}
+
+\title{assignemnt 3}
+\author{Longyu Zhu}
+\begin {document}
+
+\section*{1.6}
+\subsection*{Exercise 4}
+(a)\\
+p:Kangaroos live in Australia\\
+q:Kangaroos are marsupials\\
+\begin{tabular}{c}
+
+$q\wedge p$ \\
+\hline
+$\therefore q$ \\
+\end{tabular}
+
+(b)\\
+p: it is hotter than 100 today.\\
+q: the pollution is dangerous.\\
+\begin{tabular}{c}
+    $p\lor q$\\
+    $\lnot q$\\
+    \hline
+    $\therefore q$\\
+\end{tabular}
+
+
+(c)\\
+p:Linda is an excellent swimmer.\\
+q: Linda can work as a lifeguard.\\
+\begin{tabular}{c}
+    p\\
+    $p\rightarrow q$\\
+    \hline
+    $\therefore q$\\    
+\end{tabular}
+
+
+(d)\\
+p:Steve will work at a computer xompany this summer.\\
+q:He will be a beach bum.\\
+\begin{tabular}{c}
+    p\\
+    \hline
+    $\therefore p\lor q$\\
+\end{tabular}
+
+(e)\\
+p:i work all night on this homework.\\
+q: I can anser all the exercise.\\
+r: I will undersatnd the material.\\
+\begin{tabular}{c}
+    $p\rightarrow q$\\
+    $q\rightarrow r$\\
+    \hline
+    $\therefore p\rightarrow r$\\
+\end{tabular}
+
+\subsection*{Exercise 24}
+$\forall x(P(x)\lor Q(x))$ is true so $\forall xP(x)\lor Q(x))$ is true\\
+following the step 1, i can get permise is $\forall x(P(x)\lor Q(x))$\\
+use universal instantiation get $P(c)\lor Q(c)$\\
+and then we can get the step 3 is error, if the step 3 is error the step 5 also is error too.\\
+and the step 7 conjunction should be $\land $\\
+answer: the step 3,5 and 7 are error.\\
+
+
+\section*{1.7}
+\subsection*{Exercise 6}
+let use x and y to be two odd integers.\\
+x=2m+1\\
+y=2n+1\\
+x*y=(2m+1)*(2n+1)\\
+   =4mn+2m+2n+1\\
+   =2(2mn+m+n)+1\\
+x*y=2z+1(z is a even integers)\\
+so product two odd number is odd.\\
+
+\subsection*{Exercise 20}
+(1)\\
+if 3n+2 is even integer then n is even.\\
+so we can get $p\rightarrow q$ and $\lnot q\rightarrow \lnot p$\\
+p:n and 3n+2 is even\\
+$\lnot p$: 3n+2 are not even\\
+q:n is even\\
+$\lnot q$ : n is odd\\
+
+(2)\\
+if n is odd that meaning n=2x+1\\
+3n+2=3(2x+1)+2\\
+    =6x+3+2\\
+    =6x+5\\
+    =6x+4+1\\
+    =2(3x+2)+1  is odd\\
+so (3n+2) is odd, so if (3n+2) is even the n maut be even.\\
+
+\section*{1.8}
+\subsection*{Exercise 6}
+min(a,min(b,c))=min(min(a,b)c)\\
+(1)\\
+$a\leq min(b,c)$
+if a a is the smallest $a\leq b$ or $ a\leq c$ \\
+min(a,b)=a\\
+min(min(a,b),c)=min(a,c)=a\\
+
+(2)\\
+if $b\leq a$ and $ b\leq min(b,c)$ \\
+$a\leq b$ or $ a\leq c$ \\
+min(a,b)=b\\
+min(min(a,b),c)=min(b,c)=b\\
+
+
+(c)\\ 
+c is same with a and b the min(a,min(b,c))=min(min(a,b),c)\\
+\\
+just depend on the which one number is smalest.\\
+\subsection*{Exercise 20}
+$x<r<x+1$\\
+$|x-r|<1/2$ or $|(x+1)-r|<1/2$\\
+if $|x-r|<1/2$, we can choose n=x\\
+if $|(x+1)-r|<1/2$ we can choose n=x+1\\
+$|r-y|<1/2$\\
+$|n-y|\leq|n-r|+|r-y|=|n-r|+|y-r|=1/2+1/2=1$\\
+n=y\\
+so r is an irrational number and less than 1/2 with n\\
+
+
+
+\end{document}

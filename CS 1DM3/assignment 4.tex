@@ -1,0 +1,214 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{mathtools,amssymb}
+\title{assignemnt}
+\author{Longyu Zhu}
+\begin{document}
+
+\section*{2.1}
+\subsection*{Exercise 12}
+(a)\\
+$\varnothing  \in \{\varnothing \}$\\
+True, for the reason that $\{\varnothing \}$ meaning a empty set set so that $\varnothing$ is a element of empty set.\\
+
+(b)\\
+$\varnothing\in \{\varnothing ,\{\varnothing \}\}$\\
+True, same with (a) the $\varnothing$ is a element of that set.\\
+
+(c)\\
+$\{\varnothing \}\in \{\varnothing \}$\\
+False, they are same set that meaning they can not element in that set.\\
+
+(d)\\
+$\{\varnothing \}\in \{\{\varnothing \}\}$\\
+True, $\{\varnothing\}$ is a element of $\{\{\varnothing\}\}$.\\
+
+(e)\\
+$\{\varnothing \}\subset \{\varnothing ,\{\varnothing \}\}$
+True, $\{\varnothing\}$ is a element of $\{\varnothing,\{\varnothing\}\}$.\\
+
+(f)\\
+$\{\{\varnothing \}\}\subset \{\varnothing ,\{\varnothing \}\}$
+True, $\{\{\varnothing\}\}$ can be undersatnd the set $\{\varnothing\}$ so that is subset of the big set.\\
+
+(g)\\
+$\{\{\varnothing \}\}\subset \{\{\varnothing \},\{\varnothing \}\}$
+False, this euqal can be write like this $\{\{\varnothing \}\}= \{\{\varnothing \},\{\varnothing \}\}$ so that is False.\\
+
+\section*{2.2}
+\subsection*{Exercise 14}
+$$ 
+\left\{
+\begin{aligned}
+A-B={1,5,7,8)} \\
+B-A={2,10}\\
+A\cap B={3,6,9}
+\end{aligned}
+\right.
+$$
+\\
+\begin{equation}\nonumber
+    \begin{split}
+        A & =(A\cap B)\cup (A-B)\\
+           & =\{3,6,9\}\cup \{1,5,7,8\}\\
+           & =\{1,3,5,6,7,8,9\}\\
+        B & =(A\cap B)\cup (B-A)\\
+           & =\{3,6,9\}\cup \{2,10\}\\
+           & =\{2,3,6,9,10\}
+    \end{split}
+\end{equation}
+so $A=\{1,3,5,6,7,8,9\}$ and $B=\{2,3,6,9,10\}$\\
+
+\subsection*{Exercise 20}
+(a)\\
+$(A\cup B)\subseteq (A\cup B\cup C)$\\
+\begin{equation}\nonumber
+    \begin{split}
+    &x\in A \cup B\\
+    &x\in A\lor x\in B\\
+    &x\in A\lor x\in B\lor x\in C\\
+    &x\in A\cup B\cup C\\
+    &(A\cup B)\subseteq (A\cup B\cup C)
+    \end{split}
+\end{equation}
+
+(b)\\
+$(A\cap B\cap C)\subseteq (A\cap B)$\\
+\begin{equation}\nonumber
+    \begin{split}
+    &x\in A\cap B\cap C\\
+    &x\in A\land x\in B\land x\in C\\
+    &x\in A\land x\in B\\
+    &x\in A\cap B\\
+    &(A\cap B\cap C)\subseteq (A\cap B)
+    \end{split}
+\end{equation}
+
+(c)\\
+$(A-B)-C\subseteq A-C$\\
+\begin{equation}\nonumber
+    \begin{split}
+    &x\in (A-C)\cap (C-B)\\
+    &x\in (A-C)\land \lnot (x\in C)\\
+    &x\in A\land \lnot (x\in B)\land \lnot (x\in C)\\
+    &x\in A\land \lnot (x\in C)\\
+    &x\in A-C\\
+    &(A-B)-C\subseteq A-C
+    \end{split}
+\end{equation}
+
+(d)\\
+$(A-C)\cap (C-B)=\varnothing $\\
+\begin{equation}\nonumber
+    \begin{split}
+    &x\in (A-C)\cap (C-B)\\
+    &x\in (A-C)\land x\in (C-B)\\
+    &x\in A\land \lnot (x\in C)\land x\in C\land \lnot (x\in B)\\
+    &x\in A\land F\land \lnot (x\in B)\\
+    &x\in \varnothing\\
+    &\varnothing\subseteq (A-C)\\
+    &(A-C)\cap (C-B)=\varnothing
+    \end{split}
+\end{equation}
+
+(e)\\
+$(B-A)\cup (C-A)=(B\cup C)-A$\\
+\begin{equation}\nonumber
+    \begin{split}
+    &x\in(B-A)\cup (C-A)\\
+    &x\in(B-A) \lor x\in (C-A)\\
+    &(x\in B\land \lnot (x\in A))\lor (x\in C\land \lnot (x\in A))\\
+    &(x\in B\lor x\in C)\land \lnot (x\in A)\\
+    &(x\in B\lor C)\land \lnot (x\in A)\\
+    &x\in(B\cup C)-A\\
+    &x\in B\cup C\land \lnot (x\in A)\\
+    &(x\in B \lor x\in C)\land \lnot (x\in A)\\
+    &(x\in B\land \lnot (x\in A))\lor (x\in C \land \lnot (x\in A))\\
+    &x\in B-A\lor x\in C-A\\
+    &x\in (B-A)\cup(C-A)\\
+    &(B-A)\cup (C-A)=(B\cup C)-A
+    \end{split}
+\end{equation}
+
+\subsection*{Exercise 48}
+\begin{equation}\nonumber
+    \begin{split}
+    (A\oplus B)\oplus (C\oplus D)=(A\oplus c)\oplus (B\oplus D) 
+    &=A\oplus (B\oplus (C\oplus D))\\
+    &=A\oplus (B\oplus (D\oplus C))\\
+    &=A\oplus ((B\oplus D)\oplus C)\\
+    &=A\oplus (C\oplus (B\oplus D))\\
+    &=(A\oplus C)\oplus (B\oplus D)
+    \end{split}
+\end{equation}
+\section*{2.3}
+\subsection*{Exercise 12}
+(a)\\
+f(n)=n-1\\
+one-to-one, each one number just cna get one result.\\
+
+(b)\\
+$f(n)=n^2 +1$\\
+not one-to-one, the negitive and positive can be get the same result.like 1 and -1.\\
+
+(c)\\
+$f(n)=n^3$\\
+one-to-one, each one unumber just can get one result.\\
+
+(d)\\
+$f(n)=\lceil n/2\rceil$\\
+not one-to-one, when n=0.5 and 1 they can het the same result 1.\\
+
+\subsection*{Exercise 14}
+(a)\\
+f(m,n)=2m-n\\
+Onto, each one can number can get at little one combo of m and n.\\
+
+(b)\\
+$f(m,n)=m^2-n^2$\\
+Not onto, for example you can not get 2 by this equation.\\
+
+(c)\\
+f(m,n)=m+n+1\\
+Onto, any number you can get.\\
+
+(d)\\
+$f(m,n)=|m|-|n|$\\
+Onto, you can get any number even negitive.\\
+
+(e)\\
+$f(m,n)=m^2-4$\\
+Not onto, you can not get -5 in this equation. or any number less than -5.\\
+
+\subsection*{Exercise 20}
+(a)one-to-one but not onto\\
+$f(n)=n^2$\\
+
+(b)onto nut not one-to-one\\
+$f(n)=\lceil \frac{n}{2}\rceil$\\
+
+(c)both onto and one-to-one(but different from the identity function)\\
+$$ 
+f(n)=\left \{
+\begin{aligned}
+n-1  \quad  \text{if n is odd.}\\
+n+1   \quad  \text{if n is even.}
+\end{aligned}
+\right.
+$$
+\\
+(d)neither one to one nor onto\\
+f(n)=0\\
+
+\subsection*{Exercise 48}
+$[x+\frac{1}{2}]$\\
+when x is midway of two integer $[x+\frac{1}{2}]$ will euqal of larger than larger of two integer.\\
+
+\section*{Bonus}
+\subsection*{Exercise 74}
+if $|A|=|B|$ is one-to-one that meaning $f(a_1)=b_1$\\
+if onto B=f(A) B should have all match of A, the function is one-to-one so that will be onto.\\
+so f is one-to-one if and only if f is onto when $|A|=|B|$.\\
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{mathtools,amssymb}
+
+\title{Cs 2AC3 Assignment 2}
+\author{Longyu Zhu}
+\begin{document}
+\section*{Question 1}\nonumber
+\subsection*{(a) $\left\{x|\#1\left(x\right)=2.\#0\left(x\right)\right\}$}\nonumber
+this set meaning is the number of 1' is the double of number of 0' in the set.
+$L=\left\{x|\#1\left(x\right)=2.\#0\left(x\right)\right\}=\left\{110,011,001111,011110,.......\right\}$ divide those string we 
+can get a long string $L=\left\{110011001111011110\right\}$ can can be use the way of chapter 11 show, now we have a number $k\geq 0~and~x,y,z\in W$
+and $|y|\geq0$ and y=u,v,w and $u,v,w\in y~and~v\neq \epsilon ~and~all~i\geq 0 $ if string $xuv^iwz\notin \left(a\right)$ that meaning it is not a regular set.\\
+$x=\left\{\epsilon\right\}~y=\left\{110011001111011110\right\}~z=\left\{\epsilon\right\}$\\
+$u=\left\{1100110\right\}~v=\left\{01\right\}~w=\left\{111011110\right\}$\\
+if we choose i=3, that meaning $xuv^3wz=\left\{1100110010101111011110\right\}$ the number of 1' is 14, and the number of 0' is 8. we can get $xuv^3wz\notin\left(a\right)$
+that meaning is set is not regular.\\
+
+\subsection*{(b) $\left\{ x|\#1\left(x\right)-\#0\left(x\right)<10 \right\}$}\nonumber
+this question is same way with question (a), this set meaning the number of 1' minus with number of 0' is less than 10.\\
+and $L=\left\{ x|\#1\left(x\right)-\#0\left(x\right)<10 \right\}=\left\{110,1110,00111,....\right\}$\\
+and then put them all together $L=\left\{110111000111\right\}$\\
+$x=\left\{\epsilon\right\}~y=\left\{110111000111\right\}~z=\left\{\epsilon\right\}$\\
+right now for the L we have 8 1' and 4 o'\\
+for $u,v,w\in y$ 
+$u=\left\{11011\right\}~v=\left\{1\right\}~w=\left\{000111\right\}$\\
+if we choose i=10, that meaning $xuv^{10}w=\left\{11011 1111111111 000111\right\}$ right now the seyt(b) have 17 1' and 4 0',
+so we can get $17-4=13>10$\\
+that meaning $xuv^{10}wz\notin \left(b\right)$ so is not regular set.\\
+
+\subsection*{(c) $\left\{x|\#1\left(x\right).\#0\left(x\right)~is~even\right\}$}\nonumber
+this question is same way with question (a) and (b) , this set meaning the number of 1' multiply by number of 0' is a even number 
+$L=\left\{x|\#1\left(x\right).\#0\left(x\right)~is~even\right\}=\left\{001,100,1100\right\}$\\
+and then put them all together $L=\left\{0011001100\right\}$ right now number of 1' is 4 and number of 0' is 6 4*6=24 it is even number\\
+$x=\left\{\epsilon\right\}~y=\left\{0011001100\right\}~z=\left\{\epsilon\right\}$\\
+for $u,v,w\in y$ 
+$u=\left\{00110\right\}~v=\left\{01\right\}~w=\left\{100\right\}$\\
+if we choose i=2, that meaning $xuv^{2}w=\left\{00110 0101 100\right\}$ right now have 7 0' and 5 1'\\
+7*5=35 is not even so that meaning $xuv^2wz\notin \left(c\right)$ so that is not regular set.\\ 
+
+\section*{Question 2}\nonumber
+$\left\{x\in\left\{a,b\right\}^*|\#a\left(x\right)\leq2\#b\left(x\right)\right\}$\\
+\subsection*{a. Give a CFG for this set} \nonumber
+$$
+P=\left\{
+    \begin{aligned}
+    &S\rightarrow SASASBS~|~ SASBSAS~|~SBSASAS~|\epsilon\\
+    &A\rightarrow a~|~\epsilon\\
+    &B\rightarrow b\\
+    \end{aligned}
+\right.
+$$\\
+$N=\left\{S,A,B\right\}$\\
+$T=\left\{a,b\right\}$\\
+$S=\left\{S\right\}$\\
+
+\subsection*{b. Prove that the given CFG is correct}\nonumber
+$S\xrightarrow[G]{1}SASASBS\xrightarrow[G]{1}SBSASASASASBS\xrightarrow[G]{7}BAAAAB~(number~of~A~is~double~number~of~B)\xrightarrow[G]{6}baaab$\\
+So for the each time change of S must be one B and two A, and A is able change to a and nothing that meaning the number of a is only can be change to less after 
+S change part that menaing the number of a only cna be less or equal to double number of b.\\
+  
+\end{document}

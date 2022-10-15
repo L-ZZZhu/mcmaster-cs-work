@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{mathtools,amssymb}
+\title{assignemnt 5}
+\author{Longyu Zhu}
+\begin{document}
+\section*{7.1}
+\subsection*{Exercise 4}
+What is the probability that a randomly selected day of a leap year (with 366 possible days) is in April?\\
+P(April)=$\frac{30}{366}=\frac{5}{61}$=0.0820\\
+\subsection*{Exercise 6}
+What is the probability that a card selected at random from a standard deck of 52 cards is an ace or a heart?\\
+have 4 ace so for the ace is $\frac{4}{52}$\\
+have 13 heart so for the heart is $\frac{13}{52}$\\
+but have one thing that is if that is both ace and heart so we need less one so the answer is $\frac{4}{52}+\frac{13}{52}-\frac{1}{52}=\frac{16}{52}=\frac{4}{13}$\\
+\subsection*{Exercise 22}
+What is the probability that a positive integer not exceeding 100 selected at random is divisible by 3?\\
+$\frac{33}{100}=0.33$
+\subsection*{Exercise 34}
+a) no one can win more than one prize.\\
+$\frac{1}{200}*\frac{1}{199}*\frac{1}{198}=\frac{1}{7880400}$\\
+\\
+b) winning more than one prize is allowed.\\
+$\frac{1}{200}*\frac{1}{200}*\frac{1}{200}=\frac{1}{8000000}$\\
+\\
+\section*{7.2}
+\subsection*{Exercise 6}
+a) 1 precedes 3.\\
+$P_1=\frac{3}{6}=\frac{1}{2}$\\
+b) 3 precedes 1.\\
+$P_2=\frac{3}{6}=\frac{1}{2}$\\
+c) 3 precedes 1 and 3 precedes 2.\\
+$P_3=\frac{2}{6}=\frac{1}{3}$\\
+\subsection*{Exercise 10}
+What is the probability of these events when we randomly select a permutation of the 26 lowercase letters of the English alphabet?\\
+a) The first 13 letters of the permutation are in alphabetical order. \\
+for all letters we can get $26!$ kinds of choice.\\
+if we controll the first 13 letters,that meaning we can get $13!$ kinds of choice.\\
+so the result is $\frac{13!}{26!}$.\\
+\\
+b) a is the first letter of the permutation and z is the last letter. \\
+by the question (a) we can get $26!$ totally.\\
+so for this one question answer is $\frac{24!}{26!}=\frac{1}{25*26}=\frac{1}{650}$\\
+\\
+c) a and z are next to each other in the permutation.\\
+$25!$ kinds of choice of them keep together but them can change side,so the answer is $\frac{2*25!}{26!}=\frac{1}{13}$\\
+\\
+d) a and b are not next to each other in the permutation. \\
+by the question (c) we can get $\frac{26!-2*25!}{26!}=\frac{12}{13}$\\
+\\
+e) a and z are separated by at least 23 letters in the permutation. \\
+$\frac{3*2*1*24!}{26!}=\frac{3}{325}$\\
+\\
+f) z precedes both a and b in the permutation.\\
+$\frac{2*\frac{26!}{3!*23!}*23!}{26!}=\frac{1}{3}$\\
+\\
+\subsection*{Exercise 16}
+Show that if E and F are independent events, then $\overline{E}$ and $\overline{F}$ are also independent events.\\
+\begin{equation}\nonumber
+    \begin{split}
+        P(E\cap F)=P(E)*P(F)\\
+        P(\overline{E})=1-P(E)\\
+        P(\overline{F})=1-P(F)\\
+        P(\overline{E})*P(\overline{F})&=(1-P(E))(1-P(F))\\
+        &=1-P(E)-P(F)+P(E)*P(F)\\
+        &=1-P(E)-P(F)+P(E\cap F)\\
+        &=1-(P(E)+P(F)-P(E\Cap F))\\
+        &=1-P(E\cup F)\\
+        &=P(\overline{E\cup F})\\
+        &=P(\overline{E}\cap\overline{F})\\
+    \end{split}
+\end{equation}
+so $\overline{E}$ and $\overline{F}$ are independent events.\\
+\\
+\subsection*{Exercise 18}
+a) What is the probability that two people chosen at random were born on the same day of the week?\\
+$7*\frac{1}{7}*\frac{1}{7}=\frac{1}{7}$\\
+\\
+b) What is the probability that in a group of n people chosen at random, there are at least two born on the same day of the week? \\
+if $n>7$ that must be 1\\
+\begin{equation}\nonumber
+    \begin{split}
+        n=7&~~1-\frac{7*6*5*4*3*2*1}{7*7*7*7*7*7*7}=\frac{119629}{117649}\\
+        n=6&~~1-\frac{7*6*5*4*3*2}{7*7*7*7*7*7}=\frac{16087}{16807}\\
+        n=5&~~1-\frac{7*6*5*4*3}{7*7*7*7*7}=\frac{2041}{2401}\\
+        n=4&~~1-\frac{7*6*5*4}{7*7*7*7}=\frac{223}{343}\\
+        n=3&~~1-\frac{7*6*5}{7*7*7}=\frac{19}{49}\\
+        n=2&~~1-\frac{7*6}{7*7}=\frac{1}{7}\\
+    \end{split}
+\end{equation}
+if $n<2$ that will be 0\\
+\\
+c) How many people chosen at random are needed to make the probability greater than 1/2 that there are at least two people born on the same day of the week?\\
+more than 4 people\\
+\\
+\subsection*{Exercise 38}
+A pair of dice is rolled in a remote location and when you ask an honest observer whether at least one die came up six, this honest observer answers in the affirmative.\\
+a) What is the probability that the sum of the numbers that came up on the two dice is seven, given the information provided by the honest observer?\\
+for one die is six we can get $\frac{11}{36}$,but just have two is sum is seven so we can get $\frac{2}{11}$
+for one of six and sum is seven.\\
+\\
+b) Suppose that the honest observer tells us that at least one die came up five. What is the probability the sum of the numbers that came up on the dice is seven, given this information?\\
+this is same with question (a) we can get the answer $\frac{2}{11}$\\
+\\
+\section*{7.3}
+\subsection*{Exercise 4}
+Suppose that Ann selects a ball by first picking one of two boxes at random and then selecting a ball from this box. The first box contains three orange balls and four black balls, and the second box contains five orange balls and six black balls. What is the probability that Ann picked a ball from the second box if she has selected an orange ball?\\
+for the first totally have 7 balls and three orange balls\\
+for the second totally have 11 balls and five orange balls\\
+we can get $\frac{\frac{5}{11}*\frac{1}{2}}{\frac{5}{11}*\frac{1}{2}+\frac{3}{7}*\frac{1}{2}}=\frac{35}{68}$\\
+\\
+\subsection*{Exercise 10}
+Suppose that 4\% of the patients tested in a clinic are infected with avian influenza. Furthermore, suppose that when a blood test for avian influenza is given, 97\% of the patients infected with avian influenza test positive and that 2\% of the patients not infected with avian influenza test positive. What is the probability that a) a patient testing positive for avian influenza with this test is infected with it?\\
+\begin{equation}\nonumber
+    \begin{split}
+        P(F)=4\%=0.04\\
+        P(E|F)=97\%=0.97\\
+        P(E|\overline{F})=2\%=0.02\\
+        P(\overline{F})=1-0.04=0.96\\
+    \end{split}
+\end{equation}
+a) a patient testing positive for avian influenza with this test is infected with it?\\
+$\frac{0.97*0.04}{0.97*0.04+0.02*0.96}=\frac{0.0388}{0.058}=\frac{97}{145}$\\
+\\
+b) a patient testing positive for avian influenza with this test is not infected with it? \\
+$\frac{0.02*0.96}{0.97*0.04+0.02*0.96}=\frac{0.0192}{0.058}=\frac{48}{145}$\\
+\\
+c) a patient testing negative for avian influenza with this test is infected with it?\\
+$\frac{0.03*0.04}{0.03*0.04+0.98*0.96}=\frac{0.0012}{0.942}=\frac{1}{785}$\\
+\\
+d) a patient testing negative for avian influenza with this test is not infected with it?\\
+$\frac{0.98*0.96}{0.03*0.04+0.98*0.96}=\frac{0.9408}{0.942}=\frac{784}{785}$\\
+\\
+\end{document}

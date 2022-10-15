@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{mathtools,amssymb}
+\title{assignemnt 5}
+\author{Longyu Zhu}
+\begin{document}
+\section*{6.1}
+\subsection*{Exercise 4}
+A particular brand of shirt comes in 12 colors,
+has a male version and a female version, 
+    and comes in three sizes for each sex.
+    How many different types of this shirt are made?\\
+12*2*3=72\\
+so totally 72 different type of shirts\\
+\\
+\subsection*{Exercise 16}
+How many bit strings of length n, where n is a positive integer, start and end with 1s?\\
+for the strings only have two choice 0 and 1\\
+so we can get $1*2*2*...*2*1=2^{n-2}$ when $n\geq 2$\\
+so we also can get if n=1 just have one chioce can have.\\
+\\
+\subsection*{Exercise 60}
+The International Telecommunications Union (ITU) specifies that a telephone number must consist 
+    of a country code with between 1 and 3 digits, except that the code 0 is not available for use as a country code, 
+    followed by a number with at most 15 digits. How many available possible telephone numbers are there that satisfy these restrictions?\\
+if have three at the begin we will have 9*10*10, if two 9*10, if one just 9\\
+so we have 9*10*10+9*10+9=990 kind of choice at the begin\\
+for the followed number we have $10^{15}~10^{14}~10^{13}~10^{12}~10^{11}~10^{10}~10^{9}~10^8~10^7~10^6~10^5~10^4~10^3~10^2~10^1$\\
+we need plus then $\sum_{n = 1}^{15}10^n=1111111111111110$ \\
+at the end we need 990*1111111111111110=1109999999999998890\\
+\\
+\section*{6.2}
+\subsection*{Exercise 6}
+There are six professors teaching the introductory discrete mathematics class at a university. 
+   The same final exam is given by all six professors. If the lowest possible score on the final is 0 and the highest possible score is 100,
+   how many students must there be to guarantee that there are two students with the same professor who earned the same final examination score?\\
+at first we have 100+1 kind score can have\\
+if we want to get the same score we should have one more that meaning we need at least 102 for same professor.\\
+but we have 6 professors here so we need 101*6 to make make sure all professor have 0 to 100 score\\
+we just need add one more thus the answers will get that is (6*101)+1=607\\
+\\
+\subsection*{Exercise 18}
+a) Show that if seven integers are selected from the first 10 positive integers, there must be at least two pairs of these integers with the sum 11.\\
+we can try for 1,10   2,9   3,8   4,7    5,6\\
+thus we can just we at least have two pair available\\
+\\
+b) Is the conclusion in part (a) true if six integers are selected rather than seven?\\
+no, for the reason that the if we get 4 number we just can get at least 1 pair more than 11.\\
+\\
+\subsection*{Exercise 34}
+Show that if there are 100,000,000 wage earners in the United States who earn less than 1,000,000 dollars (but at least a penny), 
+then there are two who earned exactly the same amount of money, to the penny, last year.\\
+1000000 dollars = 100000000 penny\\
+that meaning have 99999999 kind of wage\\
+so must have too people get same wage\\
+\\
+\section*{6.3}
+\subsection*{Exercise 6}
+a) C(5,1)\\
+$\frac{5!}{4!}=\frac{5*4!}{4!}=5$\\
+b) C(5,3)\\
+$=\frac{5!}{3!(5-3)!}=\frac{5!}{3!2!}=10$\\
+c) C(8,4)\\
+$=\frac{8!}{4!(8-4)!}=\frac{8!}{4!4!}=70$\\
+d) C(8,8)\\
+$=\frac{8!}{8!(8-8)!}=\frac{8!}{8!0!}=1$\\
+e) C(8,0)\\
+$=\frac{8!}{0!(8-0)!}=\frac{8!}{0!8!}=1$\\
+f) C(12,6)\\
+$=\frac{12!}{6!(12-6)!}=\frac{12!}{6!6!}=924$\\
+\subsection*{Exercise 18}
+a) are there in total?\\
+$2^8=256$\\
+\\
+b) contain exactly there heads?\\
+$C(8,3)=\frac{8!}{3!(8-3)!}=\frac{8!}{3!5!}=56$\\
+\\
+c) contain at least three heads?\\
+C(8,3)=56 C(8,4)=70 C(8,5)=56 C(8,6)=28 C(8,7)=8 C(8,8)=1\\
+56+70+56+28+8+1=219\\
+\\
+d)contain the same number of heads and tails?\\
+C(8,4)=70\\
+\\
+\subsection*{Exercise 32}
+a) How many ways are there to select a committee of five members of the department if at least one woman must be on the committee?\\
+C(16,5)=$\frac{16!}{5!(16-5)!}=\frac{16!}{5!11!}=4368$(from all people get 5)\\
+C(9,5)=$\frac{9!}{5!(9-5)!}=\frac{9!}{5!4!}=126$(how many kind of all man)\\
+4368-126=4242\\
+\\
+b) How many ways are there to select a committee of five members of the department if at least one woman and at least one man must be on the committee?\\
+C(7,5)=$\frac{7!}{5!(7-5)!}=\frac{7!}{5!2!}=21$(all for women)\\
+4368-126-21=4221\\
+\\
+\section*{6.4}
+\subsection*{Exercise 2}
+$(x+y)^5$\\
+a) using combinatorial reasoning\\
+\begin{equation}\nonumber
+    \begin{split}
+        (x+u)^5&=(x+y)(x+y)(x+y)(x+y)(x+y)\\
+        &=(x^2+xy+xy+y^2)(x^2+xy+xy+y^2)(x+y)\\
+        &=(x^2+2xy+y^2)(x^2+2xy+y^2)(x+y)\\
+        &=(x^4+2x^3y+x^2y^2+2x^3y+4x^2y^2+2xy^3+x^2y^2+2xy^3+x^2y^2+2xy^3+y^4)(x+y)\\
+        &=(x^4+4x^3y+6x^2y^2+4xy^3+y^4)(x+y)\\
+        &=x^5+4x^4y+6x^3y^2+4x^2y^3+xy^4+x^4y+4x^3y^2+6x^2y^3+4xy^4+y^5\\
+        &=x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5
+    \end{split}
+\end{equation}
+\\
+b) using the binomial theorem.\\
+\begin{equation}\nonumber
+    \begin{split}
+        (x+y)^5&=\left(\substack{5\\0}\right)x^5y^0+\left(\substack{5\\1}\right)x^4y^1+\left(\substack{5\\2}\right)x^3y^2+\left(\substack{5\\3}\right)x^2y^3+\left(\substack{5\\4}\right)x^1y^4+\left(\substack{5\\5}\right)x^0y^5\\
+        &=\frac{5!}{0!5!}x^5y^0+\frac{5!}{1!4!}x^4y^1+\frac{5!}{2!3!}x^3y^2+\frac{5!}{3!2!}x^2y^3+\frac{5!}{4!1!}x^1y^4+\frac{5!}{5!0!}x^0y^5\\
+        &=1x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5\\
+        &=x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5
+    \end{split}
+\end{equation}
+\\
+\subsection*{Exercise 12}
+$(5x^2+2y^3)^6$  $x^ay^b$\\\\
+a)a=6,b=9\\
+$(\substack{6\\3})5x^{2^2}2y^{3^3}=\frac{6!}{3!3!}5x^{2^2}2y^{3^3}=120*5^3*2^3x^6y^9=20000x^6y^9$\\
+\\
+b)a=2,b=15\\
+$(\substack{6\\1})5x^{2^1}2y^{3^5}=\frac{6!}{1!5!}5x^{2^1}2y^{3^5}=6*5*2^5x^2y^{15}=960x^2y^{15}$\\
+\\
+c)a=3,b=12\\
+not available for this equation.\\
+\\
+d)a=12,b=0\\
+$(\substack{6\\0})5x^{2^6}=\frac{6!}{0!6!}5x^{2^6}=5^6x^{12}=15625x^{12}$\\
+\\
+e)a=8,b=9\\
+not available for this equation.\\
+\end{document}

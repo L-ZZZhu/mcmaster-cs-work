@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\parindent0pt
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{mathtools,amssymb}
+\title{Cs 2AC3 Assignment 2}
+\author{Longyu Zhu}
+\begin{document}
+    \section*{Question 1}
+    rev$\left(\varepsilon\right)=\varepsilon$\\
+    rev$\left(xa\right)=a.rev\left(x\right)$\\
+    \\\\
+    easy to show is\\ 1. inverting the transitions (use the calculator to get the new form) \\
+    2.change all initial states to the finals tates\\
+    3.add new initial states by step 1\\
+    \\
+
+    by the logic is \\
+    Let $M=\left(\sum ,Q,s,q_0,\delta \right)$ be DFA that accept A,and construct an NFA 
+    $M'=\left(\sum,Q',s',q_0',\delta'\right)$\\
+    $Q'=Q \cup \{x\}$ (x is a new states not in Q)\\
+    $s'=x$\\
+    $q_0=\{s\}$\\
+    $\delta'\left(x,\varepsilon\right)=q_0$\\
+    $\exists y\in Q,a\in\sum~~\delta'\left(y,a\right)=\{y'\in Q|\delta\left(y',a\right)=y\}$\\
+    Obtained from M by reversing all directions of the edges, M0 is an acceptable state and he is the starting point of M.\\
+    example\\
+    $L=ab^*+ba$ and we can get the reverse of L is $L=b^*a+ab$\\
+    \section*{Question 2}
+    by the book i get the number states of NFA and DFA is $1\leq m\leq 2^m$\\
+    because for the NFA we can use one line to connect with both states, but for the DFA should be use two line between states,
+    so we can get to the max states from NFA to DFA is $2^{NFA~number~states}$ \\
+    if A is a NFA and accept state avaliable  a and b for the end state.\\
+    and B is a DFA transitions form NFA that meaing need two accept a and b\\
+    $A=ab(a+b)$ so A just just need n=3 state B will need $2^{3-1}=4$ states\\
+    but for if A heve 4 states by the question B will at least have $2^{4-1}=8$\\
+    \\
+    by the book, we know that DFA for $L_n$ need to remember last $\left(states~of~NFA-1\right)$ symbols, thus DFA will have to to have 
+    at least $2^{\left(states~of~NFA-1\right)}=2^{m-1}$ state (because the tree structure)\\
+    \\    
+    and i also get more information from online of structure of tree of DFA\\
+    \\
+    that because the structure of tree, that like tree (begin state) to the branches (state) will have two choice (1 and 0) and the branches to the leaf will have two choice (1 and 0) 
+    but this structure will be keep working until the accept state, if we use NFA to do this structure just need a line because NFA is Nondeterministic but for the DFA we need to show 
+    each one leaf and branches on the DFA structure. And because we can make sure the tree of which is our want that meaning we dont need to do choice (1 and 0) the tree of the land 
+    so that the states of DFA will be $2^{m-1}$, but if we change the example we need begin with the land that land is deterministic that meaing we dont make choice of land.\\
+    So what ever the begin state keep change but we can deterministic one state that is why we need minus 1.\\
+    the minus 1 meaning to make sure that is what I need, like i need the leaf=1 or branche=1, if put tree one the 2-bit number will be like i need the number end with 1 or the number 
+    begin with 1 or 0, that menaing we have to have one number is deterministic.\\
+    And this structure of tree is the easiest in NFA structure so we use at least. if the NFA is a circle that will be use more than tree structure transitions.\\
+    So if want to change the NFA to the DFA we need at least $2^{NFA~number~states-1}$\\
+    \section*{Question 3}
+    $\alpha =\left(a+b\right)^*ab\left(a+b\right)^*$ get equivalent $\sim  ~\alpha$\\
+    \begin{equation}\nonumber
+        \begin{split}
+            \alpha &=\left(a+b\right)^*ab\left(a+b\right)^*\\
+            &=\left(a^*b\right)^*a^*aa^*\left(ab^*\right)^*b\\
+        \end{split}
+    \end{equation}
+    $L\left(\sim \alpha \right)=\sim L\left(\alpha\right)=\sum^*-\left(\alpha\right)$
+    \subsection{a}
+    $\sum =\{a,b\}$\\
+    $\sim~\alpha=b^*a^*$\\
+    \subsection{b}
+    $\sum=\{a,b,c\}$\\
+    $\sim~\alpha=c^*b^*c^*a^*c^*$\\
+
+
+
+\end{document}

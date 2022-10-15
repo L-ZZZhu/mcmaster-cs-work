@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\parindent0pt
+
+\title{assignemnt 1}
+\author{Longyu Zhu}
+
+\begin{document}
+
+\section*{1.1}
+
+\subsection*{Exercise 14}
+
+(a)If you have flu then you will miss the fineal examination.\\
+
+(b)You won't miss the final examination if and only if you pass the course.\\
+
+(c)If you miss the examination then you will be failing the course.\\
+
+(d)You have the flu or you miss the finail examinaon or you pass the course.\\
+
+(e)If you have the flu then you'll not pass the course or If you miss the final examination then you'll fail the course.\\
+
+(f)You have the flu and you miss the examination or You will not miss the final examination and you pass the course.\\
+
+\subsection*{Exercise 16}
+
+(a)$r\land \neg q$\\
+
+(b)$p\land q\land r$ \\
+
+(c)$p\Rightarrow r$\\
+
+(d)$p\land \neg q\land r$\\
+
+(e)$(p\land q)\Rightarrow r$\\
+
+(f)$r\Leftrightarrow (p\lor q)$\\
+
+
+\subsection*{Exercise 20}
+
+(a)True\\
+
+(b)True \\
+
+(c)False\\
+
+(d)True \\
+
+\subsection*{Exercise 22}
+
+(a) Inclusive or\\
+
+(b) Exclusive or\\
+
+(c) Inclusive or\\
+
+(d) Exclusive or\\
+
+\subsection*{Exercise 34}
+(a)\\
+\begin{tabular}{|c|c|c|}
+\hline
+$P$& $\neg P$& $P\Rightarrow \lnot P$\\
+\hline 
+T & F & F\\
+\hline 
+F & T & T\\
+\hline 
+\end{tabular}
+\\
+
+(b)\\
+\begin{tabular}{|c|c|c|}
+    \hline
+    $P$& $\neg P$& $P\Leftrightarrow  \lnot P$\\
+    \hline 
+    T & F & F\\
+    \hline 
+    F & T & F\\
+    \hline 
+    \end{tabular}
+\\
+
+(c)
+\begin{tabular}{|c|c|c|c|}
+    \hline 
+    $P$ & $Q$ & $(P\lor Q)$ & $P\oplus (P\lor Q)$\\
+    \hline 
+    T&T&T&F\\
+    \hline 
+    T & F & T & T \\
+    \hline 
+    F & T & T &T \\
+    \hline 
+    F & F & F & F \\
+    \hline 
+\end{tabular}
+\\
+
+
+(d)
+\begin{tabular}{|c|c|c|c|c|}
+    \hline 
+    $P$ & $Q$ & $(P\lor Q)$ & $(P\land Q)$ & $(P\land Q)\Rightarrow (P\lor Q)$\\
+    \hline 
+    T&T&T&T&T\\
+    \hline 
+    T&F&T&F&T\\
+    \hline 
+    F&T&T&F&T\\
+    \hline 
+    F&F&F&F&T\\
+    \hline 
+\end{tabular}
+\\
+
+
+(e)
+\begin{tabular}{|c|c|c|c|c|c|}
+    \hline 
+    $P$ & $Q$ & $\lnot P$ & $(Q\Rightarrow \lnot P)$ & $(P\Leftrightarrow Q)$ & $(Q\Rightarrow \lnot P)\Leftrightarrow (P\Leftrightarrow Q)$\\
+    \hline 
+    T&T&F&F&T&F\\
+    \hline 
+    T&F&F&T&F&F\\
+    \hline 
+    F&T&T&T&F&F\\
+    \hline 
+    F&F&T&T&T&T\\
+    \hline 
+\end{tabular}
+\\
+
+(f)
+\begin{tabular}{|c|c|c|c|c|c|}
+    \hline 
+    $P$ & $Q$ & $\lnot Q$ & $(Q\Leftrightarrow  P)$ & $(P\Leftrightarrow \lnot Q)$ & $(p\Leftrightarrow Q)\oplus (P\Leftrightarrow \lnot Q)$\\
+    \hline 
+    T&T&F&T&F&T\\
+    \hline 
+    T&F&T&F&T&T\\
+    \hline 
+    F&T&F&F&T&T\\
+    \hline 
+    F&F&T&T&F&T\\
+    \hline 
+\end{tabular}
+
+\section*{1.3}
+
+\subsection*{Exercise 4}
+
+(a)
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline 
+    $P$ & $Q$ & $R$ & $P\lor Q$ & $ Q\lor R$ & $(P\lor Q)\lor R$ & $P\lor (Q\lor R)$\\
+    \hline 
+    T&T&T&T&T&T&T\\
+    \hline 
+    T&T&F&T&T&T&T\\
+    \hline 
+    T&F&T&T&T&T&T\\
+    \hline 
+    T&F&F&T&F&T&T\\
+    \hline 
+    F&T&T&T&T&T&T\\
+    \hline 
+    F&T&F&T&T&T&T\\
+    \hline 
+    F&F&T&F&T&T&T\\
+    \hline 
+    F&F&F&F&F&F&F\\
+    \hline
+\end{tabular}
+\\
+(b)
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline 
+    $P$ & $Q$ & $R$ & $P\land  Q$ & $ Q\land  R$ & $(P\land Q)\land  R$ & $P\land  (Q\land R)$\\
+    \hline 
+    T&T&T&T&T&T&T\\
+    \hline 
+    T&T&F&T&F&F&F\\
+    \hline 
+    T&F&T&F&F&F&F\\
+    \hline 
+    T&F&F&F&F&F&F\\
+    \hline 
+    F&T&T&F&F&F&F\\
+    \hline 
+    F&T&F&F&F&F&F\\
+    \hline 
+    F&F&T&F&F&F&F\\
+    \hline 
+    F&F&F&F&F&F&F\\
+    \hline
+\end{tabular}
+\\
+result:they are verify the associative laws.\\
+\end{document}  
